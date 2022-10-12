@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.App {
+  height: 400px;
+  width: 300px;
+  background: white;
+  border: 2px solid red;
+}
+
+.Display {
+  background: hsl(246, 20%, 20%);
+  color: #59c3c3;
+  text-shadow: 0 0 5px rgba(89, 195, 195, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 29px;
+  box-sizing: border-box;
+  height: 20%;
+  overflow: hidden;
+  font-size: 24px;
+  position: relative;
+}
+
+.Display::after {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  mix-blend-mode: overlay;
+  display: block;
+  z-index: 2;
+}
+
+.ButtonBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 80.5%;
+}
+
+.Button {
+  background-color: rgb(80, 60, 209);
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  width: 25%;
+  font-size: 1.5rem;
+  height: 20%;
+  min-width: 25%;
+}
+
+.Button[data-size='2'] {
+  height: 40%;
+}
+
+.Button:hover {
+  background-color: rgb(61, 43, 184);
+  cursor: pointer;
+}
+
+.Button:active {
+  background-color: rgb(243, 61, 29);
+}
